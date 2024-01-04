@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <Button
+            android:id="@+id/addTrackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="addTrack"
+            android:text="Add Track"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/returnTracksButton"
+            app:layout_constraintTop_toBottomOf="@+id/singerAdd"
+            android:layout_marginTop="16dp"/>
+
+    <Button
+            android:id="@+id/returnTracksButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="returnTracks"
+            android:text="Return to Tracks"
+            app:layout_constraintEnd_toStartOf="@+id/addTrackButton"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/addTrackButton" />
+
+    <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add a Track"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/idAdd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="16dp"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/idAdd"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:hint="ID"
+            app:layout_constraintBottom_toTopOf="@+id/titleAdd"
+            app:layout_constraintEnd_toEndOf="@+id/titleAdd"
+            app:layout_constraintStart_toStartOf="@+id/titleAdd"
+            app:layout_constraintTop_toBottomOf="@+id/titleTextView"
+            android:layout_marginTop="16dp"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/titleAdd"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:hint="Title"
+            app:layout_constraintBottom_toTopOf="@+id/singerAdd"
+            app:layout_constraintEnd_toEndOf="@+id/singerAdd"
+            app:layout_constraintStart_toStartOf="@+id/singerAdd"
+            app:layout_constraintTop_toBottomOf="@+id/idAdd"
+            android:layout_marginTop="16dp"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/singerAdd"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:hint="Singer"
+            app:layout_constraintBottom_toTopOf="@+id/addTrackButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleAdd"
+            android:layout_marginTop="16dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

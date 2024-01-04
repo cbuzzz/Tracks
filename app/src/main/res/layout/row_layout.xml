@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+
+    <!-- Container for the card content -->
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <!-- Image view for the track image -->
+        <ImageView
+                android:id="@+id/imgTrack"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_launcher_background" />
+
+        <!-- TextView for the track ID -->
+        <TextView
+                android:id="@+id/idTrack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/imgTrack"
+                android:text="TextView" />
+
+        <!-- TextView for the track title -->
+        <TextView
+                android:id="@+id/titleTrack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/idTrack"
+                android:layout_alignLeft="@+id/idTrack"
+                android:text="TextView" />
+
+        <!-- TextView for the track singer -->
+        <TextView
+                android:id="@+id/singerTrack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleTrack"
+                android:layout_alignLeft="@+id/titleTrack"
+                android:text="TextView" />
+
+        <!-- Divider line between track information and delete button -->
+        <View
+                android:id="@+id/linea"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_above="@+id/delete"
+                android:layout_toRightOf="@+id/imgTrack"
+                android:background="#ffd5d5d5" />
+
+        <!-- ImageView for the delete button -->
+        <ImageView
+                android:id="@+id/delete"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white"
+                android:onClick="deleteTrack"
+                android:src="@drawable/trash" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
